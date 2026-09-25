@@ -1,0 +1,26 @@
+**/*.vscode
+
+# Environment files
+.env
+!.env.docker
+
+# Logs
+docker/nginx/logs/*
+*.log
+
+# Database data
+docker/mariadb/data/*
+!docker/mariadb/data/.gitignore
+
+# PHP dependencies
+vendor/
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+*.swp
+*.swo
+*~
