@@ -237,6 +237,12 @@ Add the following to your WordPress `wp-config.php` for local development suppor
 // Allow WordPress to make HTTP requests to external/private IPs (for local development)
 define( 'ALLOW_UNFILTERED_UPLOADS', true );
 add_filter( 'http_request_host_is_external', '__return_true' );
+
+
+add_filter( 'http_request_args', function ( $args ) {
+    $args['reject_unsafe_urls'] = false;
+    return $args;
+}, 999 );
 ```
 
 ## ⚠️ Notes

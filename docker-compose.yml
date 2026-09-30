@@ -15,6 +15,9 @@ services:
             - ${DOCKER_APP_NAME}.host
         environment:
             TZ: ${APP_TIMEZONE}
+        dns:
+            - 8.8.8.8
+            - 1.1.1.1
 
     nginx:
         container_name: ${DOCKER_APP_NAME}.nginx
